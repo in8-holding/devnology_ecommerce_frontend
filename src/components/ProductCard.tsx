@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Product } from "../types";
+import { MdImageNotSupported } from "react-icons/md";
 
 interface Props {
   product: Product;
@@ -17,11 +18,9 @@ export default function ProductCard({ product, onAdd }: Props) {
 
   return (
     <div className="bg-white rounded-xl p-4 shadow relative">
-      <img
-        src="https://miro.medium.com/v2/resize:fit:1400/1*KtVnpUxvBzCActwcctDYIA.png"
-        alt={product.name}
-        className="w-full h-48 object-cover rounded"
-      />
+      <div className="w-full h-48 object-cover rounded bg-violet-200 flex items-center justify-center">
+        <MdImageNotSupported size={24} />
+      </div>
       <h2 className="font-semibold text-sm mt-2">{product.name}</h2>
       <p className="font-light text-sm line-clamp-2 text-zinc-600">
         {product.description}
@@ -33,7 +32,7 @@ export default function ProductCard({ product, onAdd }: Props) {
         </div>
         <button
           onClick={handleAdd}
-          className="bg-blue-600 text-white px-3 py-1 rounded mt-2"
+          className="bg-blue-600 text-white px-3 py-1 rounded mt-2 cursor-pointer text-sm"
         >
           Adicionar
         </button>

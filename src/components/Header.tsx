@@ -3,7 +3,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import AsideCart from "./AsideCart";
 import { AnimatePresence } from "framer-motion";
 import { useCart } from "../contexts/CartContext";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 
